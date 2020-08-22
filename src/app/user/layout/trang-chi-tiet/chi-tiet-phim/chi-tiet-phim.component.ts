@@ -55,7 +55,7 @@ export class ChiTietPhimComponent implements OnInit {
 
   //Set tham so de lay lich chieu
   SetThamSo() {
-    this.paramsSub1 = this.activatedRoute.queryParams.subscribe(thamso => {
+    this.activatedRoute.queryParams.subscribe(thamso => {
       this.MovieID = thamso['id'];
       const temp:Number = parseInt(thamso['id'])
       this.MovieDetail = temp < 5 ? DanhSachPhimDangChieu.filter(x => x.ID == this.MovieID)[0] : DanhSachPhimSapChieu.filter(x => x.ID == this.MovieID)[0]

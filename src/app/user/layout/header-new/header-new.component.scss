@@ -7,8 +7,7 @@
 }
 
 .navbar-toggler{
-    border:1px solid $ColorPrimary;
-    border-radius: 0;
+
 }
 
 .navbar-toggler-icon{
@@ -56,6 +55,9 @@ i:hover{
     padding-left: 25px;
 }
 
+#navbarTogglerDemo02{
+    padding-bottom: 25px;
+}
 
 .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 1.5rem;

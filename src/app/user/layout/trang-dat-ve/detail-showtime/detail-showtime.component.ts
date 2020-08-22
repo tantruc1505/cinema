@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
 import { Router, ActivatedRoute } from '@angular/router';
 import { MovieService } from '../../../../Services/movie.service';
@@ -16,7 +16,6 @@ export class DetailShowtimeComponent implements OnInit {
   public IDMovie:any;
   public MaNhom:any;
   // public urlHost: string = 'http://sv.myclass.vn/Images/Movies/';
-  public MovieDetail:any;
 
   public dsGhe:Array<any>;
 
@@ -30,6 +29,8 @@ export class DetailShowtimeComponent implements OnInit {
   public titleMovie:any;
   public desMovie:any;
   public TenRap:any;
+
+  @Input() MovieDetail:any;
 
   public ThongTinCheckout:ThongTinCheckout = new ThongTinCheckout();
 
@@ -72,15 +73,9 @@ export class DetailShowtimeComponent implements OnInit {
   GetImage()
   {
     //Lay Image phim
-    this.paramsSub3 = this.movieService.LayChiTietPhim_LichChieuTheoNhom(this.IDMovie,this.MaNhom).subscribe((result:any)=>{ 
-      this.MovieDetail = result;
-      this.imgMovie = result.Image;
-      this.titleMovie = result.Title;
-      this.desMovie = result.Description;
-
-    },error => {
-      this.MovieDetail = error;
-    });  
+      this.imgMovie = this.MovieDetail.Image;
+      this.titleMovie = this.MovieDetail.Title;
+      this.desMovie = this.MovieDetail.Description;
   }
 
   ngOnDestroy(){
