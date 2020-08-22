@@ -44,7 +44,7 @@ a{
 }
 
 img{
-   width: 98%;
+   width: 100%;
    height: 350px;
 }
 
@@ -147,7 +147,7 @@ button{
 }
 button.chitietphim{
     position: absolute;
-    top: 35%;
+    top: calc(48% + 70px);
     left: 50%;
     transform: translate(-50%,-50%);
     width: 65%;
@@ -250,7 +250,7 @@ button.datve{
     .imageHover{
         img{
             height: 250px;
-            width: 90%;
+            width: 100%;
         }
     }
 }

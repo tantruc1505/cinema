@@ -3,7 +3,7 @@
 #CheckoutPage{
     background: $ColorBackground;
     color:white;
-    padding-bottom: 100px;
+    // padding-bottom: 100px;
 }
 
 small{
@@ -64,18 +64,10 @@ h3::before{
     }
 }
 
-@media(max-width:1024px){
-    #CheckoutPage{
-        padding-bottom: 40px; 
-        min-height: 84vh;
-    }
-}
-
-@media(max-width:768px){
-    #CheckoutPage{
-        padding-bottom: 40px;
-        min-height: 79vh;
-    }
+@media(max-width:414px){
+  #CheckoutPage h3{
+      margin : 50px 0;
+  }
 }
 
 @media(max-width:414px){
