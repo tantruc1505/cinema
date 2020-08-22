@@ -1,0 +1,49 @@
+<div id="LoginRegister2">
+  <div *ngIf="statusLogin == false; else Logout">
+      <div id="login" class="d-flex" (click)="login" data-toggle="modal" data-target="#LoginModal2">
+        <div style="align-items: center; justify-content: center; padding:8px 0 21px 0" >
+          <i class="fas fa-user"></i>
+          <!-- Button to Open the Modal -->
+          <span id="login2" class="login ml-2">
+            Đăng Nhập
+          </span>
+        </div>
+          
+      </div>
+  </div>
+  
+  <ng-template #Logout>
+    <div class="d-flex" style="padding:8px 21px">
+            <div class="d-inline">
+              <a id="logout" class="logout">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                  <span id="name" class="ml-1">Hello, {{TenUser}}</span>
+              </a>
+            </div>
+            <div class="d-inline ml-4">
+              <a id="logout2" (click)="DangXuat($event)" class="logout">
+                  <i class="fas fa-sign-out-alt"></i>
+                  <span>Logout</span>             
+              </a>
+            </div>
+    
+    </div>
+  </ng-template>
+
+    <div class="modal left fade" id="LoginModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-body bodycontent">
+                <button type="button" class="close dong" data-dismiss="modal">&times;</button>
+                <div class="background">
+                  </div>
+                  <!-- <app-login></app-login> -->
+                  <app-login2 (ThongTinUser)="ThongTinUser($event)"></app-login2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    
+  
+</div>
