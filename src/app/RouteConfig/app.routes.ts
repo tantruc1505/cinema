@@ -20,4 +20,4 @@ const routing: Routes = [
             {path:'Checkout',component:TrangCheckoutComponent}
         ]},
 ];
-export const appRoutes = RouterModule.forRoot(routing)
+export const appRoutes = RouterModule.forRoot(routing,{ useHash: true })
