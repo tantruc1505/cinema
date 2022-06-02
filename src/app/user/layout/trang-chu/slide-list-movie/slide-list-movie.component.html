@@ -40,7 +40,7 @@
             <owl-carousel #owlElement [options]="customOptions" [items]="images" [carouselClasses]="['owl-theme','sliding']">
               <div class="imgMovie" *ngFor="let phim of DanhSachPhimDangChieu">
                 <div class="imageHover">
-                  <img src="../../../../../assets/images/{{phim.Image}}" [alt]="phim.Title" class="img-fluid">
+                  <img src="assets/images/{{phim.Image}}" [alt]="phim.Title" class="img-fluid">
                   <div class="overplay">
                     <button type="button" class="chitietphim" data-toggle="modal" data-target="#myModal" (click)="thongtin(phim.Title,phim.TrailerURI)">Trailer</button>
                     <button type="button" class="datve" (click)="XemChiTiet(phim.ID,MaNhom)" appAniHover>Đặt Vé</button>
@@ -75,7 +75,7 @@
             <owl-carousel [options]="customOptions" [items]="images" [carouselClasses]="['owl-theme','sliding']">
               <div class="imgMovie" *ngFor="let phim of DanhSachPhimSapChieu">
                 <div class="imageHover">
-                  <img src="../../../../../assets/images/{{phim.Image}}" [alt]="phim.Title" class="img-fluid">
+                  <img src="assets/images/{{phim.Image}}" [alt]="phim.Title" class="img-fluid">
                   <div class="overplay">
                     <button type="button" class="datve" (click)="XemChiTiet(phim.ID,MaNhom)" appAniHover>Đặt Vé</button>
                     <button type="button" class="chitietphim" data-toggle="modal" data-target="#myModal" (click)="thongtin(phim.Title,phim.TrailerURI)">Trailer</button>
