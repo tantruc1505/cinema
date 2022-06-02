@@ -9,7 +9,7 @@
       "outDir": "dist",
       "deployUrl": "https://tantruc1505.github.io/cinema/",
       "assets": [
-        "cinema/assets",
+        "assets",
         "favicon.ico"
       ],
       "index": "index.html",
