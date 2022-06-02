@@ -139,7 +139,7 @@ var routing = [
             { path: 'Checkout', component: __WEBPACK_IMPORTED_MODULE_5__user_layout_trang_checkout_trang_checkout_component__["a" /* TrangCheckoutComponent */] }
         ] },
 ];
-var appRoutes = __WEBPACK_IMPORTED_MODULE_0__angular_router__["c" /* RouterModule */].forRoot(routing, { useHash: true });
+var appRoutes = __WEBPACK_IMPORTED_MODULE_0__angular_router__["c" /* RouterModule */].forRoot(routing);
 
 
 /***/ }),
