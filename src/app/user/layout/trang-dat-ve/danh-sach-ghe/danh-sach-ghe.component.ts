@@ -129,6 +129,8 @@ export class DanhSachGheComponent implements OnInit {
     }
     this.dsGheCheckSpace.sort((a, b) => a.NumOrder - b.NumOrder);
 
+    console.log(this.dsGheCheckSpace)
+
     for (let i = 0; i < this.dsGheCheckSpace.length; i++) {
       let stthientai = this.dsGheCheckSpace[i].SoThuTu;
       let loaihientai = this.dsGheCheckSpace[i].LoaiGhe;
@@ -174,6 +176,9 @@ export class DanhSachGheComponent implements OnInit {
       if (i == this.dsGheCheckSpace.length - 1) {
         //Check lần đầu có khoảng trống cuối dãy
         if (stthientai == 9) {
+          errors = 2;
+        }
+        if (stthientai == 2) {
           errors = 2;
         }
       }

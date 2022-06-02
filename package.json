@@ -2,8 +2,12 @@
   "name": "movie",
   "version": "0.0.0",
   "license": "MIT",
+  "homepage": "https://tantruc1505.github.io/cinema",
+
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "ng build",
+    "deploy": "gh-pages -d dist"
   },
   "private": true,
   "dependencies": {
@@ -21,6 +25,7 @@
     "core-js": "^2.4.1",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
+    "gh-pages": "^4.0.0",
     "jquery": "^3.3.1",
     "mydatepicker": "^2.6.3",
     "ngx-owl-carousel": "^2.0.7",

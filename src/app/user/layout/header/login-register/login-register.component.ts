@@ -20,18 +20,16 @@ export class LoginRegisterComponent implements OnInit {
     this.CheckLogin();
   }
 
-  // ThongTinUser(ThongTinUser)
-  // {
-  //   if(ThongTinUser != null || ThongTinUser != undefined){
-  //     this.statusLogin = true;
-  //     this.TenUser = ThongTinUser.FullName;
-      
-  //     setTimeout(() => {
-  //       $(".close").trigger("click");
-  //     }, 200);
-      
-  //   }
-  // }
+  ThongTinUser(thongtin){
+    if(thongtin != null){
+      this.statusLogin = true;
+      this.TenUser = thongtin.FullName;
+      localStorage.setItem('localUser',JSON.stringify(thongtin));
+    }
+    else{
+      this.statusLogin = false;
+    }
+  }
 
  
   DangXuat(event)

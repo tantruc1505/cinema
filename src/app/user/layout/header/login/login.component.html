@@ -5,6 +5,10 @@
         <li class="nav-item pr-3">
             <a class="nav-link active lbdangnhap" data-toggle="pill" href="#dangnhap">
                 <h5>Đăng Nhập</h5>
+                <div class="mt-3">
+                    <small style="color:#8e959e" class="d-block">Username: test</small>
+                    <small style="color:#8e959e" class="d-block">Password: test</small>
+                </div>
             </a>
         </li>
 
@@ -23,7 +27,6 @@
 
 
             <form [formGroup]="myform" #loginForm="ngForm" (ngSubmit)="Login(loginForm.value,$event)">
-
                 <div class="group">
                     <input type="text" formControlName="UserName" name="UserName" ngModel required [ngClass]="{'thatbai': UserName.invalid && (UserName.dirty)}">
                     <label class="label">Tài Khoản</label>

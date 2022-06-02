@@ -35,32 +35,23 @@ export class LoginComponent implements OnInit {
 
   Login(userLogin:UserLogin,event)
   {
-    if(this.myform.valid)
-    {
+    if (this.myform.valid) {
       $(".spinner").show();
-
       setTimeout(() => {
-        userLogin.GroupID = this.Groups;
-      this.userService.DangNhap(userLogin).subscribe((result) => {
-        this.ThongTin = result;
-        if(result == "The account or password is incorrect"){
-          this.thongbao.Error("Sai tài khoản hoặc mật khẩu!");
-        }else {
-          this.ThongTinUser.emit(result);
-        }
-        $(".spinner").hide();
-
-      
-      }, error => {
-        this.ThongTin = error;
-      });
-      event.preventDefault();
+          if (userLogin.UserName !== "test" && userLogin.PassWord !== "test") {
+            this.thongbao.Error("Sai tài khoản hoặc mật khẩu!");
+          } else {
+            this.ThongTinUser.emit({
+              FullName: 'Test',
+              UserName: 'Test',
+              Email: 'test@gmail.com'
+            });
+            $(".close").trigger("click");
+          }
+          $(".spinner").hide();
       }, 1000);
-
-      
     }
-    else
-    {
+    else {
       this.validateAllFormFields(this.myform);
     }
   }
