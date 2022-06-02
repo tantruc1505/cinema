@@ -7,9 +7,8 @@
     {
       "root": "src",
       "outDir": "dist",
-      "deployUrl": "https://tantruc1505.github.io/cinema/",
       "assets": [
-        "assets",
+        "cinema/assets",
         "favicon.ico"
       ],
       "index": "index.html",
