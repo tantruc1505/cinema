@@ -139,7 +139,7 @@ var routing = [
             { path: 'Checkout', component: __WEBPACK_IMPORTED_MODULE_5__user_layout_trang_checkout_trang_checkout_component__["a" /* TrangCheckoutComponent */] }
         ] },
 ];
-var appRoutes = __WEBPACK_IMPORTED_MODULE_0__angular_router__["c" /* RouterModule */].forRoot(routing);
+var appRoutes = __WEBPACK_IMPORTED_MODULE_0__angular_router__["c" /* RouterModule */].forRoot(routing, { useHash: true });
 
 
 /***/ }),
@@ -664,12 +664,14 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Services_user_service__ = __webpack_require__("./src/app/Services/user.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Services_check_login_guard__ = __webpack_require__("./src/app/Services/check-login.guard.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Services_thong_bao_service__ = __webpack_require__("./src/app/Services/thong-bao.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__angular_common__ = __webpack_require__("./node_modules/@angular/common/esm5/common.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -700,7 +702,7 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_7__angular_router__["c" /* RouterModule */],
                 __WEBPACK_IMPORTED_MODULE_8__angular_http__["c" /* HttpModule */],
             ],
-            providers: [__WEBPACK_IMPORTED_MODULE_9__Services_movie_service__["a" /* MovieService */], __WEBPACK_IMPORTED_MODULE_10__Services_user_service__["a" /* UserService */], __WEBPACK_IMPORTED_MODULE_11__Services_check_login_guard__["a" /* CheckLoginGuard */], __WEBPACK_IMPORTED_MODULE_12__Services_thong_bao_service__["a" /* ThongBaoService */]],
+            providers: [{ provide: __WEBPACK_IMPORTED_MODULE_13__angular_common__["LocationStrategy"], useClass: __WEBPACK_IMPORTED_MODULE_13__angular_common__["HashLocationStrategy"] }, __WEBPACK_IMPORTED_MODULE_9__Services_movie_service__["a" /* MovieService */], __WEBPACK_IMPORTED_MODULE_10__Services_user_service__["a" /* UserService */], __WEBPACK_IMPORTED_MODULE_11__Services_check_login_guard__["a" /* CheckLoginGuard */], __WEBPACK_IMPORTED_MODULE_12__Services_thong_bao_service__["a" /* ThongBaoService */]],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
