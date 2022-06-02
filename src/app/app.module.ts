@@ -32,7 +32,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     RouterModule,
     HttpModule,
   ],
-  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy},MovieService, UserService,CheckLoginGuard,ThongBaoService],
+  providers: [MovieService, UserService,CheckLoginGuard,ThongBaoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
