@@ -40,12 +40,12 @@ export class SlideListMovieComponent implements OnInit {
   //Đối tượng nhận dữ liệu trả về khi gọi đến server
  
 
-  private DanhSachPhimDangChieu = DanhSachPhimDangChieu
-  private DanhSachPhimSapChieu = DanhSachPhimSapChieu
+  public DanhSachPhimDangChieu = DanhSachPhimDangChieu
+  public DanhSachPhimSapChieu = DanhSachPhimSapChieu
 
-  private tenphim: any;
+  public tenphim: any;
   public urlPhim: any;
-  private url: any;
+  public url: any;
 
   public check: boolean = false;
 
