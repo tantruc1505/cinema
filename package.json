@@ -2,7 +2,7 @@
   "name": "movie",
   "version": "0.0.0",
   "license": "MIT",
-  "homepage": "https://tantruc1505.github.io/cinema",
+  "homepage": "https://tantruc1505.github.io/cinema/",
 
   "scripts": {
     "start": "node server.js",
